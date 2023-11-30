@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-6 offset-3">
+        <h4>Agregar un nuevo servicio</h4>
+        <form action="/admin/servicios/agregar" method="post" enctype="multipart/form-data">
+            <div class="mb-3 row">
+                <input type="text" class="form-control" placeholder="Servicio" name="servicio">
+            </div>
+
+            <div class="mb-3 row">
+                <textarea type="text" class="form-control" placeholder="Descripcion" name="descripcion"></textarea>
+            </div>
+
+            <div class="mb-3 row">
+                <textarea type="text" class="form-control" placeholder="Precio" name="precio"></textarea>
+            </div>
+
+            <div class="mb-3 row">
+                <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen" /></label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}
+    </div>
+</div>
